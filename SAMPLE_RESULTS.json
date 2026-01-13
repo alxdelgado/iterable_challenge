@@ -1,0 +1,71 @@
+{
+  "total_users": 3,
+  "successful": 3,
+  "partial_failures": 0,
+  "total_failures": 0,
+  "records": [
+    {
+      "email": "sarah.johnson@email.com",
+      "timestamp": "2026-01-13T14:30:46.123456",
+      "users_update": {
+        "success": true,
+        "response": {
+          "code": "Success",
+          "msg": "User profile updated successfully",
+          "params": {}
+        }
+      },
+      "events_track": {
+        "success": true,
+        "response": {
+          "code": "Success",
+          "msg": "Event tracked successfully",
+          "params": {}
+        }
+      },
+      "overall_success": true
+    },
+    {
+      "email": "olivia.brown@email.com",
+      "timestamp": "2026-01-13T14:30:47.234567",
+      "users_update": {
+        "success": true,
+        "response": {
+          "code": "Success",
+          "msg": "User profile updated successfully",
+          "params": {}
+        }
+      },
+      "events_track": {
+        "success": true,
+        "response": {
+          "code": "Success",
+          "msg": "Event tracked successfully",
+          "params": {}
+        }
+      },
+      "overall_success": true
+    },
+    {
+      "email": "mia.harris@email.com",
+      "timestamp": "2026-01-13T14:30:48.345678",
+      "users_update": {
+        "success": true,
+        "response": {
+          "code": "Success",
+          "msg": "User profile updated successfully",
+          "params": {}
+        }
+      },
+      "events_track": {
+        "success": true,
+        "response": {
+          "code": "Success",
+          "msg": "Event tracked successfully",
+          "params": {}
+        }
+      },
+      "overall_success": true
+    }
+  ]
+}
