@@ -1,0 +1,6 @@
+id,email,first_name,last_name,plan_type,candidate,page,device,browser,location,event_time
+14,mia.harris@email.com,Mia,Harris,pro,yes,settings,mobile,Chrome,"Dallas, TX",2026-01-13 21:45:30
+10,ava.garcia@email.com,Ava,Garcia,pro,no,pricing,desktop,Chrome,"Portland, OR",2026-01-13 18:20:14
+6,olivia.brown@email.com,Olivia,Brown,pro,yes,pricing,mobile,Chrome,"Seattle, WA",2026-01-13 13:45:50
+2,sarah.johnson@email.com,Sarah,Johnson,pro,yes,settings,mobile,Safari,"New York, NY",2026-01-13 10:15:22
+1,delgadoalex10@gmail.com,Alex,Delgado,pro,Alex Delgado,pricing,desktop,Firefox,"San Francisco, CA",2026-01-13 08:45:12

@@ -8,7 +8,7 @@ DROP TABLE IF EXISTS customers;
 -- Create Customers Table
 CREATE TABLE customers (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
-    email TEXT NOT NULL UNIQUE,
+    email VARCHAR(255) NOT NULL UNIQUE,
     first_name TEXT NOT NULL,
     last_name TEXT NOT NULL,
     plan_type TEXT NOT NULL,

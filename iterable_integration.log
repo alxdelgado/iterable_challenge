@@ -1,0 +1,77 @@
+2026-01-13 13:59:14 - __main__ - INFO - ======================================================================
+2026-01-13 13:59:14 - __main__ - INFO - Starting Iterable Integration - Phase 3
+2026-01-13 13:59:14 - __main__ - INFO - ======================================================================
+2026-01-13 13:59:14 - __main__ - INFO - 
+[STEP 1] Loading environment variables...
+2026-01-13 13:59:14 - __main__ - ERROR - Missing required environment variables: DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, ITERABLE_API_KEY
+2026-01-13 13:59:14 - __main__ - ERROR - Please ensure .env file is configured with all required variables
+2026-01-13 14:04:21 - __main__ - INFO - ======================================================================
+2026-01-13 14:04:21 - __main__ - INFO - Starting Iterable Integration - Phase 3
+2026-01-13 14:04:21 - __main__ - INFO - ======================================================================
+2026-01-13 14:04:21 - __main__ - INFO - 
+[STEP 1] Loading environment variables...
+2026-01-13 14:04:21 - __main__ - ERROR - Missing required environment variables: DB_PASSWORD
+2026-01-13 14:04:21 - __main__ - ERROR - Please ensure .env file is configured with all required variables
+2026-01-13 14:06:03 - __main__ - INFO - ======================================================================
+2026-01-13 14:06:03 - __main__ - INFO - Starting Iterable Integration - Phase 3
+2026-01-13 14:06:03 - __main__ - INFO - ======================================================================
+2026-01-13 14:06:03 - __main__ - INFO - 
+[STEP 1] Loading environment variables...
+2026-01-13 14:06:03 - __main__ - INFO - Environment variables loaded successfully
+2026-01-13 14:06:03 - __main__ - INFO - 
+[STEP 2] Connecting to database...
+2026-01-13 14:06:03 - __main__ - ERROR - Failed to connect to database. Exiting.
+2026-01-13 14:07:20 - __main__ - INFO - ======================================================================
+2026-01-13 14:07:20 - __main__ - INFO - Starting Iterable Integration - Phase 3
+2026-01-13 14:07:20 - __main__ - INFO - ======================================================================
+2026-01-13 14:07:20 - __main__ - INFO - 
+[STEP 1] Loading environment variables...
+2026-01-13 14:07:20 - __main__ - INFO - Environment variables loaded successfully
+2026-01-13 14:07:20 - __main__ - INFO - 
+[STEP 2] Connecting to database...
+2026-01-13 14:07:20 - __main__ - INFO - 
+[STEP 3] Executing Phase 2 Query 2: Get pro users with recent engagement...
+2026-01-13 14:07:20 - __main__ - INFO - Found 5 pro user(s) with recent engagement
+2026-01-13 14:07:20 - __main__ - INFO - 
+[STEP 4] Initializing Iterable API client...
+2026-01-13 14:07:20 - __main__ - INFO - Iterable API client initialized
+2026-01-13 14:07:20 - __main__ - INFO - 
+[STEP 4.5] Exporting query results to CSV...
+2026-01-13 14:07:20 - __main__ - INFO - Query results exported to: query_results_20260113_140720.csv
+2026-01-13 14:07:20 - __main__ - INFO - 
+[STEP 5] Processing user records...
+2026-01-13 14:07:20 - __main__ - INFO - ----------------------------------------------------------------------
+2026-01-13 14:07:20 - __main__ - INFO - 
+Processing record 1/5
+2026-01-13 14:07:21 - __main__ - INFO - 
+Processing record 2/5
+2026-01-13 14:07:22 - __main__ - INFO - 
+Processing record 3/5
+2026-01-13 14:07:22 - __main__ - INFO - 
+Processing record 4/5
+2026-01-13 14:07:23 - __main__ - INFO - 
+Processing record 5/5
+2026-01-13 14:07:24 - __main__ - INFO - 
+----------------------------------------------------------------------
+2026-01-13 14:07:24 - __main__ - INFO - 
+[STEP 6] Generating summary report...
+2026-01-13 14:07:24 - __main__ - INFO - 
+Retry Configuration:
+2026-01-13 14:07:24 - __main__ - INFO -   Max Retries: 3
+2026-01-13 14:07:24 - __main__ - INFO -   Initial Backoff: 1s
+2026-01-13 14:07:24 - __main__ - INFO -   Backoff Factor: 2x (exponential)
+2026-01-13 14:07:24 - __main__ - INFO - 
+======================================================================
+2026-01-13 14:07:24 - __main__ - INFO - INTEGRATION SUMMARY
+2026-01-13 14:07:24 - __main__ - INFO - ======================================================================
+2026-01-13 14:07:24 - __main__ - INFO - Total users processed: 5
+2026-01-13 14:07:24 - __main__ - INFO - ✓ Successful (both API calls): 5
+2026-01-13 14:07:24 - __main__ - INFO - ⚠ Partial failures (one call failed): 0
+2026-01-13 14:07:24 - __main__ - INFO - ✗ Total failures (both calls failed): 0
+2026-01-13 14:07:24 - __main__ - INFO - ✓ CSV Export: query_results_20260113_140720.csv
+2026-01-13 14:07:24 - __main__ - INFO - ✓ Authentication: API Key
+2026-01-13 14:07:24 - __main__ - INFO - ======================================================================
+2026-01-13 14:07:24 - __main__ - INFO - 
+Detailed results saved to: integration_results_20260113_140724.json
+2026-01-13 14:07:24 - __main__ - INFO - 
+Integration complete!

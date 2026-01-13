@@ -12,7 +12,7 @@ from datetime import datetime
 
 # Import modules
 from db_connection import DatabaseConnection
-from iterable_client import IterableClient
+from iterable_client import IterableClient, export_results_to_csv
 from logger_config import setup_logger, get_logger
 
 # Initialize logger
@@ -29,10 +29,10 @@ def load_environment_variables() -> Dict[str, str]:
     Returns:
         Dictionary of environment variables
     """
+    # Required vars (DB_PASSWORD can be empty for local MySQL without password)
     required_vars = [
         'DB_HOST',
         'DB_USER',
-        'DB_PASSWORD',
         'DB_NAME',
         'ITERABLE_API_KEY'
     ]
@@ -46,6 +46,9 @@ def load_environment_variables() -> Dict[str, str]:
             missing_vars.append(var)
         else:
             env_vars[var] = value
+    
+    # DB_PASSWORD is optional (can be empty for local MySQL without password)
+    env_vars['DB_PASSWORD'] = os.getenv('DB_PASSWORD', '')
     
     if missing_vars:
         logger.error(f"Missing required environment variables: {', '.join(missing_vars)}")
@@ -101,13 +104,23 @@ def run_integration():
     
     logger.info(f"Found {len(user_records)} pro user(s) with recent engagement")
     
-    # Step 4: Initialize Iterable client
+    # Step 4: Initialize Iterable client with JWT or API key
     logger.info("\n[STEP 4] Initializing Iterable API client...")
+    use_jwt = os.getenv('USE_JWT_AUTH', 'false').lower() == 'true'
+    jwt_secret = os.getenv('ITERABLE_JWT_SECRET')
+    
     iterable_client = IterableClient(
         api_key=env_vars['ITERABLE_API_KEY'],
+        jwt_secret=jwt_secret,
+        use_jwt=use_jwt,
         base_url=os.getenv('ITERABLE_API_BASE_URL', 'https://api.iterable.com')
     )
     logger.info("Iterable API client initialized")
+    
+    # Step 4.5: Export query results to CSV (Bonus Feature)
+    logger.info("\n[STEP 4.5] Exporting query results to CSV...")
+    csv_file = export_results_to_csv(user_records)
+    logger.info(f"Query results exported to: {csv_file}")
     
     # Step 5: Process each user record
     logger.info("\n[STEP 5] Processing user records...")
@@ -142,6 +155,12 @@ def run_integration():
     
     db.disconnect()
     
+    # Log retry configuration
+    logger.info(f"\nRetry Configuration:")
+    logger.info(f"  Max Retries: {iterable_client.max_retries}")
+    logger.info(f"  Initial Backoff: {iterable_client.initial_backoff}s")
+    logger.info(f"  Backoff Factor: {iterable_client.backoff_factor}x (exponential)")
+    
     # Log summary
     logger.info("\n" + "=" * 70)
     logger.info("INTEGRATION SUMMARY")
@@ -150,6 +169,8 @@ def run_integration():
     logger.info(f"✓ Successful (both API calls): {results['successful']}")
     logger.info(f"⚠ Partial failures (one call failed): {results['partial_failures']}")
     logger.info(f"✗ Total failures (both calls failed): {results['total_failures']}")
+    logger.info(f"✓ CSV Export: {csv_file}")
+    logger.info(f"✓ Authentication: {'JWT' if use_jwt else 'API Key'}")
     logger.info("=" * 70)
     
     # Save detailed results to JSON file

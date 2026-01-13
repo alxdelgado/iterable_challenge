@@ -1,0 +1,123 @@
+{
+  "total_users": 5,
+  "successful": 5,
+  "partial_failures": 0,
+  "total_failures": 0,
+  "records": [
+    {
+      "email": "mia.harris@email.com",
+      "timestamp": "2026-01-13T14:07:20.742958",
+      "users_update": {
+        "success": true,
+        "response": {
+          "msg": "User successfully created/updated. New fields created are: [plan_type,recent_page_view,candidate]",
+          "code": "Success",
+          "params": null
+        }
+      },
+      "events_track": {
+        "success": true,
+        "response": {
+          "msg": "Event with id: ffb3e88c316844efb00fb408f28aeb8c tracked. Fields that were created were: [page_view.candidate,page_view.location,page_view.browser,page_view.timestamp,page_view.page]",
+          "code": "Success",
+          "params": {
+            "id": "ffb3e88c316844efb00fb408f28aeb8c"
+          }
+        }
+      },
+      "overall_success": true
+    },
+    {
+      "email": "ava.garcia@email.com",
+      "timestamp": "2026-01-13T14:07:21.536519",
+      "users_update": {
+        "success": true,
+        "response": {
+          "msg": "User successfully created/updated. New fields created are: [plan_type,recent_page_view,candidate]",
+          "code": "Success",
+          "params": null
+        }
+      },
+      "events_track": {
+        "success": true,
+        "response": {
+          "msg": "Event with id: eac5c507c64042008c549d3c2a06daf8 tracked. Fields that were created were: [page_view.candidate,page_view.location,page_view.browser,page_view.timestamp,page_view.page]",
+          "code": "Success",
+          "params": {
+            "id": "eac5c507c64042008c549d3c2a06daf8"
+          }
+        }
+      },
+      "overall_success": true
+    },
+    {
+      "email": "olivia.brown@email.com",
+      "timestamp": "2026-01-13T14:07:22.058001",
+      "users_update": {
+        "success": true,
+        "response": {
+          "msg": "User successfully created/updated. New fields created are: [plan_type,recent_page_view,candidate]",
+          "code": "Success",
+          "params": null
+        }
+      },
+      "events_track": {
+        "success": true,
+        "response": {
+          "msg": "Event with id: b62fbf0f2a534e2b9a5a5bb4b678bf04 tracked. Fields that were created were: [page_view.candidate,page_view.location,page_view.browser,page_view.timestamp,page_view.page]",
+          "code": "Success",
+          "params": {
+            "id": "b62fbf0f2a534e2b9a5a5bb4b678bf04"
+          }
+        }
+      },
+      "overall_success": true
+    },
+    {
+      "email": "sarah.johnson@email.com",
+      "timestamp": "2026-01-13T14:07:22.606098",
+      "users_update": {
+        "success": true,
+        "response": {
+          "msg": "User successfully created/updated. New fields created are: [plan_type,recent_page_view,candidate]",
+          "code": "Success",
+          "params": null
+        }
+      },
+      "events_track": {
+        "success": true,
+        "response": {
+          "msg": "Event with id: 64e08de4f5a44cafa0ceca57b0d64ea2 tracked. Fields that were created were: [page_view.candidate,page_view.location,page_view.browser,page_view.timestamp,page_view.page]",
+          "code": "Success",
+          "params": {
+            "id": "64e08de4f5a44cafa0ceca57b0d64ea2"
+          }
+        }
+      },
+      "overall_success": true
+    },
+    {
+      "email": "delgadoalex10@gmail.com",
+      "timestamp": "2026-01-13T14:07:23.599027",
+      "users_update": {
+        "success": true,
+        "response": {
+          "msg": "User successfully created/updated. New fields created are: [plan_type,recent_page_view,candidate]",
+          "code": "Success",
+          "params": null
+        }
+      },
+      "events_track": {
+        "success": true,
+        "response": {
+          "msg": "Event with id: d1d38555f6d34afbb98593123dfb7a21 tracked. Fields that were created were: [page_view.candidate,page_view.location,page_view.browser,page_view.timestamp,page_view.page]",
+          "code": "Success",
+          "params": {
+            "id": "d1d38555f6d34afbb98593123dfb7a21"
+          }
+        }
+      },
+      "overall_success": true
+    }
+  ]
+}
