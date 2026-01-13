@@ -49,3 +49,8 @@ Thumbs.db
 # Generated results
 integration_results_*.json
 query_results_*.csv
+
+# Presentation files (internal/local only)
+PRESENTATION_GUIDE.md
+PRESENTATION_GUIDE.pdf
+PRESENTATION_QUICKREF.md
