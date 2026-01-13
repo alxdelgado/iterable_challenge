@@ -31,6 +31,7 @@ CREATE TABLE page_views (
 -- Seed Customers Table (15 customers)
 -- ==========================================
 INSERT INTO customers (email, first_name, last_name, plan_type, candidate) VALUES
+('delgadoalex10@gmail.com', 'Alex', 'Delgado', 'pro', 'Alex Delgado'),
 ('sarah.johnson@email.com', 'Sarah', 'Johnson', 'pro', 'yes'),
 ('michael.chen@email.com', 'Michael', 'Chen', 'enterprise', 'no'),
 ('emma.williams@email.com', 'Emma', 'Williams', 'free', 'yes'),
