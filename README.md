@@ -438,24 +438,6 @@ In .env:
 ITERABLE_API_BASE_URL=https://api-staging.iterable.com  # For testing
 ```
 
-## Performance Considerations
-
-- **Rate Limits**: 500 req/sec for users/update, 2000 req/sec for events/track
-- **Batch Processing**: Current implementation processes one user at a time
-- **Timeout**: 10-second timeout per API call
-- **Retry Logic**: Not implemented (can be added in IterableClient)
-
-## Future Enhancements
-
-1. **Batch API Calls**: Group multiple users into single requests if Iterable supports
-2. **Retry Logic**: Implement exponential backoff for 5xx errors
-3. **Rate Limit Management**: Track and respect per-second rate limits
-4. **Incremental Processing**: Track processed users to resume on failure
-5. **Webhook Verification**: Confirm events received by Iterable
-6. **Data Validation**: Pre-validate data before sending to API
-
-## Security Notes
-
 - Never commit .env file with real credentials
 - Use API keys with minimal required permissions
 - Rotate API keys regularly
@@ -497,4 +479,4 @@ For issues:
 
 **Project Status**: ✅ Phase 1 (Database) ✅ Phase 2 (SQL Queries) ✅ Phase 3 (Python Integration)
 
-**Next Step**: Create PDF documentation for project presentation
+

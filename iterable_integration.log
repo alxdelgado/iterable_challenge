@@ -75,3 +75,57 @@ Retry Configuration:
 Detailed results saved to: integration_results_20260113_140724.json
 2026-01-13 14:07:24 - __main__ - INFO - 
 Integration complete!
+2026-01-13 14:30:01 - __main__ - INFO - ======================================================================
+2026-01-13 14:30:01 - __main__ - INFO - Starting Iterable Integration - Phase 3
+2026-01-13 14:30:01 - __main__ - INFO - ======================================================================
+2026-01-13 14:30:01 - __main__ - INFO - 
+[STEP 1] Loading environment variables...
+2026-01-13 14:30:01 - __main__ - INFO - Environment variables loaded successfully
+2026-01-13 14:30:01 - __main__ - INFO - 
+[STEP 2] Connecting to database...
+2026-01-13 14:30:01 - __main__ - INFO - 
+[STEP 3] Executing Phase 2 Query 2: Get pro users with recent engagement...
+2026-01-13 14:30:01 - __main__ - INFO - Found 5 pro user(s) with recent engagement
+2026-01-13 14:30:01 - __main__ - INFO - 
+[STEP 4] Initializing Iterable API client...
+2026-01-13 14:30:01 - __main__ - INFO - Iterable API client initialized
+2026-01-13 14:30:01 - __main__ - INFO - 
+[STEP 4.5] Exporting query results to CSV...
+2026-01-13 14:30:01 - __main__ - INFO - Query results exported to: query_results_20260113_143001.csv
+2026-01-13 14:30:01 - __main__ - INFO - 
+[STEP 5] Processing user records...
+2026-01-13 14:30:01 - __main__ - INFO - ----------------------------------------------------------------------
+2026-01-13 14:30:01 - __main__ - INFO - 
+Processing record 1/5
+2026-01-13 14:30:02 - __main__ - INFO - 
+Processing record 2/5
+2026-01-13 14:30:02 - __main__ - INFO - 
+Processing record 3/5
+2026-01-13 14:30:03 - __main__ - INFO - 
+Processing record 4/5
+2026-01-13 14:30:03 - __main__ - INFO - 
+Processing record 5/5
+2026-01-13 14:30:04 - __main__ - INFO - 
+----------------------------------------------------------------------
+2026-01-13 14:30:04 - __main__ - INFO - 
+[STEP 6] Generating summary report...
+2026-01-13 14:30:04 - __main__ - INFO - 
+Retry Configuration:
+2026-01-13 14:30:04 - __main__ - INFO -   Max Retries: 3
+2026-01-13 14:30:04 - __main__ - INFO -   Initial Backoff: 1s
+2026-01-13 14:30:04 - __main__ - INFO -   Backoff Factor: 2x (exponential)
+2026-01-13 14:30:04 - __main__ - INFO - 
+======================================================================
+2026-01-13 14:30:04 - __main__ - INFO - INTEGRATION SUMMARY
+2026-01-13 14:30:04 - __main__ - INFO - ======================================================================
+2026-01-13 14:30:04 - __main__ - INFO - Total users processed: 5
+2026-01-13 14:30:04 - __main__ - INFO - ✓ Successful (both API calls): 5
+2026-01-13 14:30:04 - __main__ - INFO - ⚠ Partial failures (one call failed): 0
+2026-01-13 14:30:04 - __main__ - INFO - ✗ Total failures (both calls failed): 0
+2026-01-13 14:30:04 - __main__ - INFO - ✓ CSV Export: query_results_20260113_143001.csv
+2026-01-13 14:30:04 - __main__ - INFO - ✓ Authentication: API Key
+2026-01-13 14:30:04 - __main__ - INFO - ======================================================================
+2026-01-13 14:30:04 - __main__ - INFO - 
+Detailed results saved to: integration_results_20260113_143004.json
+2026-01-13 14:30:04 - __main__ - INFO - 
+Integration complete!
